@@ -7,7 +7,6 @@ import vue from '@vitejs/plugin-vue';
 export default defineConfig(() => {
     return {
         plugins: [vue()],
-        base: '/RFC-Generator/',
         resolve: {
             alias: {
                 '@': fileURLToPath(new URL('./src', import.meta.url))
