@@ -19,6 +19,11 @@ const router = createRouter({
                     component: () => import('@/views/pages/Modulos/formClientes.vue')
                 },
                 {
+                    path: '/puntoVenta',
+                    name: 'puntoVenta',
+                    component: () => import('@/views/pages/Modulos/puntoVenta.vue')
+                },
+                {
                     path: '/uikit/formlayout',
                     name: 'formlayout',
                     component: () => import('@/views/uikit/FormLayout.vue')
