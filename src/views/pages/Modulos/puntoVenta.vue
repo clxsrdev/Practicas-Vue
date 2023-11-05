@@ -106,7 +106,24 @@ export default {
 					return value.toLocaleString('en-US', {style: 'currency', currency: 'USD'});
 				return;
 			}
-        }    
+        },
+		computed: {
+			subtotal() {
+				return this.tablaCompras.reduce((subtotal, producto) => {
+					return subtotal + producto.precioParcial;
+				}, 0);
+			},
+			iva(){
+				return this.tablaCompras.reduce((iva, producto) => {
+					return iva + (producto.precioParcial * 0.16);
+				}, 0);
+			},
+			totalTotal(){
+				return this.tablaCompras.reduce((total, producto) => {
+					return total + producto.precioParcial + (producto.precioParcial * 0.16);
+				}, 0);
+			}
+		}
 }
 </script>
 
@@ -195,11 +212,11 @@ export default {
 				</template>
 				<template v-slot:end>
                     <label for="total">Subtotal: </label>
-					<InputText class="ml-3" type="text" placeholder="$ " v-model="totalCompra" disabled/>	
+					<InputText class="ml-3" type="text" placeholder="$ " v-model="subtotal" disabled/>	
                     <label class="ml-5" for="total">IVA (16%): </label>
-					<InputText class="ml-3" type="text" placeholder="$ " v-model="totalCompra" disabled/>	
+					<InputText class="ml-3" type="text" placeholder="$ " v-model="iva" disabled/>	
 					<label class="ml-5" for="total">Total: </label>
-					<InputText class="ml-3" type="text" placeholder="$ " v-model="totalCompra" disabled/>	
+					<InputText class="ml-3" type="text" placeholder="$ " v-model="totalTotal" disabled/>	
 				</template>
 				</Toolbar>
 			</Panel>
