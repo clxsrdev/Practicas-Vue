@@ -24,6 +24,11 @@ const router = createRouter({
                     component: () => import('@/views/pages/Modulos/puntoVenta.vue')
                 },
                 {
+                    path: '/api',
+                    name: 'API',
+                    component: () => import('@/views/pages/Modulos/apiCons.vue')
+                },
+                {
                     path: '/uikit/formlayout',
                     name: 'formlayout',
                     component: () => import('@/views/uikit/FormLayout.vue')
