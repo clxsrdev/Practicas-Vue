@@ -25,6 +25,7 @@ export default {
                 datos.value = response.data;
                 console.log("Response: ", datos.value);
                 toast.add({ severity: 'success', summary: 'Exito', detail: 'Los datos de la API cargaron correctamente.', life: 3000 });
+                toast.add({ severity: 'info', summary: 'Dato', detail: 'Puedes checar los datos llegando desde la consola.', life: 3000 });
         }
 
         const setChartData = () => {
