@@ -29,6 +29,11 @@ const router = createRouter({
                     component: () => import('@/views/pages/Modulos/apiCons.vue')
                 },
                 {
+                    path: '/charts',
+                    name: 'Chart',
+                    component: () => import('@/views/pages/Modulos/chart.vue')
+                },
+                {
                     path: '/uikit/formlayout',
                     name: 'formlayout',
                     component: () => import('@/views/uikit/FormLayout.vue')

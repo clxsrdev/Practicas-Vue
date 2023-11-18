@@ -12,7 +12,8 @@ const model = ref([
         label: 'Módulos',
         items: [{ label: 'Demo Clientes', icon: 'pi pi-fw pi-user', to: '/formClientes' },
                 { label: 'Punto de venta', icon: 'pi pi-fw pi-cart-plus', to: '/puntoVenta' },
-                { label: 'Consultar API REST', icon: 'pi pi-fw pi-code', to: '/api' }
+                { label: 'Consultar API REST', icon: 'pi pi-fw pi-code', to: '/api' },
+                { label: 'Uso de Charts', icon: 'pi pi-fw pi-chart-bar', to: '/charts' }
         ]
     },
 ]);
